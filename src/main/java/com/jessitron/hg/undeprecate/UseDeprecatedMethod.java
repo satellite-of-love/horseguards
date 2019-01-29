@@ -11,7 +11,7 @@ public class UseDeprecatedMethod {
         ConcurrentHashMultiset<String> chm = ConcurrentHashMultiset.create();
         chm.add("foo");
 
-        Set<Multiset.Entry<String>> entrySet = chm.createEntrySet();
+        Set<Multiset.Entry<String>> entrySet = chm.entrySet();
 
         int len = entrySet.size();
 
