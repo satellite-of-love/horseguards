@@ -6,7 +6,7 @@ import com.google.common.io.ByteStreams;
 public class CallWriteBytes {
 
     public void doStuff() {
-        ByteArrayDataOutput op = ByteStreams.newDataOutput();
+        ByteArrayDataOutput op = ByteStreams.foo();
 
 
         /* should be: la la la

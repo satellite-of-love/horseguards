@@ -10,11 +10,11 @@ class HorseguardsController {
 
         HorseguardsClient client = new HorseguardsClient();
 
-        HorseguardsResponse response = client.get("https://bananas.com")
+        HorseguardsResponse response = client.foo("https://bananas.com")
                 .execute();
 
         return "App running: Served from " + getClass().getName() +
-                " got " + response.statusCode();
+                " got " + response.foo();
     }
 
     public String storingResponseCorrectly() throws IOException {
@@ -23,7 +23,7 @@ class HorseguardsController {
 
         HorseguardsResponse response = null;
         try {
-            response = client.get("https://bananas.com")
+            response = client.foo("https://bananas.com")
                     .execute();
         } finally {
             if (response != null) {
@@ -32,14 +32,14 @@ class HorseguardsController {
         }
 
         return "App running: Served from " + getClass().getName() +
-                " got " + response.statusCode();
+                " got " + response.foo();
     }
 
     public String storingStatusCode() throws IOException {
 
         HorseguardsClient client = new HorseguardsClient();
 
-        int statusCode = client.get("https://bananas.com")
+        int statusCode = client.foo("https://bananas.com")
                 .execute()
                 .statusCode();
 
@@ -53,7 +53,7 @@ class HorseguardsController {
 
         HorseguardsResponse response = null;
         try {
-            response = client.get("https://bananas.com")
+            response = client.foo("https://bananas.com")
                     .execute();
         } finally {
             if (response != null) {
@@ -61,7 +61,7 @@ class HorseguardsController {
             }
         }
 
-        int statusCode = response.statusCode();
+        int statusCode = response.foo();
 
         return "App running: Served from " + getClass().getName() +
                 " got " + statusCode;
