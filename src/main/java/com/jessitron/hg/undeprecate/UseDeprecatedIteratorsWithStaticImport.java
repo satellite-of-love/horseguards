@@ -1,6 +1,6 @@
 package com.jessitron.hg.undeprecate;
 
-import static com.google.common.collect.Iterators.emptyIterator;
+import static java.util.Collections.emptyIterator;
 
 import java.util.Iterator;
 
