@@ -9,7 +9,7 @@ public class CallWriteBytes {
         ByteArrayDataOutput op = ByteStreams.newDataOutput();
 
 
-        /* should be:
+        /* should be: la la la
         op.write(
                 "I am the string of danger".getBytes(Charsets.UTF_8));
          */
