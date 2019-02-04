@@ -7,7 +7,7 @@ import static com.google.common.collect.Iterators.*;
 public class UseDeprecatedIteratorsWithStaticImportStar {
 
     public void doStuff() {
-        Iterator<String> it = emptyIterator();
+        Iterator<String> it = emptyIterator() /* TODO: use java.util.Collections.emptyIterator */;
     }
 }
 
