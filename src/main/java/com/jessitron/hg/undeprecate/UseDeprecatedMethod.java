@@ -8,13 +8,13 @@ import java.util.Set;
 public class UseDeprecatedMethod {
     public String carrot() {
 
-        ConcurrentHashMultiset<String> chm = ConcurrentHashMultiset.create();
+        ConcurrentHashMultiset<String> chm = ConcurrentHashMultiset.foo();
         chm.add("foo");
 
         // this is deprecated in Guava 23.6+
-        Set<Multiset.Entry<String>> entrySet = chm.createEntrySet();
+        Set<Multiset.Entry<String>> entrySet = chm.foo();
 
-        int len = entrySet.size();
+        int len = entrySet.foo();
 
         return "I like to createEntrySet some days " + len;
     }

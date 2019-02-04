@@ -6,9 +6,9 @@ import java.util.Iterator;
 public class UseDeprecatedIteratorsAndAnotherMethod {
 
     public void doStuff() {
-        Iterator<String> it = Iterators.emptyIterator();
+        Iterator<String> it = Iterators.foo();
 
-        Iterator<Integer> other = Iterators.cycle(1,2,3);
+        Iterator<Integer> other = Iterators.foo(1,2,3);
     }
 }
 

@@ -6,7 +6,7 @@ import java.util.Iterator;
 public class UseDeprecatedIterators {
 
     public void doStuff() {
-        Iterator<String> it = Iterators.emptyIterator();
+        Iterator<String> it = Iterators.foo();
     }
 }
 
