@@ -6,9 +6,8 @@ import java.util.Iterator;
 
 public class UseDeprecatedIteratorsWithStaticImport {
 
-    public void doStuff() {
-        Iterator<String> it = emptyIterator();
-    }
+	public void doStuff() {
+		Iterator<String> it = emptyIterator();
+	}
+
 }
-
-

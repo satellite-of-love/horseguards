@@ -5,11 +5,10 @@ import java.util.Iterator;
 
 public class UseDeprecatedIteratorsAndAnotherMethod {
 
-    public void doStuff() {
-        Iterator<String> it = Iterators.emptyIterator();
+	public void doStuff() {
+		Iterator<String> it = Iterators.emptyIterator();
 
-        Iterator<Integer> other = Iterators.cycle(1,2,3);
-    }
+		Iterator<Integer> other = Iterators.cycle(1, 2, 3);
+	}
+
 }
-
-

@@ -1,71 +1,64 @@
 package com.jessitron.hg;
 
-
 import java.io.IOException;
-
 
 class HorseguardsController {
 
-    public String storingResponse() throws IOException {
+	public String storingResponse() throws IOException {
 
-        HorseguardsClient client = new HorseguardsClient();
+		HorseguardsClient client = new HorseguardsClient();
 
-        HorseguardsResponse response = client.get("https://bananas.com")
-                .execute();
+		HorseguardsResponse response = client.get("https://bananas.com").execute();
 
-        return "App running: Served from " + getClass().getName() +
-                " got " + response.statusCode();
-    }
+		return "App running: Served from " + getClass().getName() + " got "
+				+ response.statusCode();
+	}
 
-    public String storingResponseCorrectly() throws IOException {
+	public String storingResponseCorrectly() throws IOException {
 
-        HorseguardsClient client = new HorseguardsClient();
+		HorseguardsClient client = new HorseguardsClient();
 
-        HorseguardsResponse response = null;
-        try {
-            response = client.get("https://bananas.com")
-                    .execute();
-        } finally {
-            if (response != null) {
-                response.close();
-            }
-        }
+		HorseguardsResponse response = null;
+		try {
+			response = client.get("https://bananas.com").execute();
+		}
+		finally {
+			if (response != null) {
+				response.close();
+			}
+		}
 
-        return "App running: Served from " + getClass().getName() +
-                " got " + response.statusCode();
-    }
+		return "App running: Served from " + getClass().getName() + " got "
+				+ response.statusCode();
+	}
 
-    public String storingStatusCode() throws IOException {
+	public String storingStatusCode() throws IOException {
 
-        HorseguardsClient client = new HorseguardsClient();
+		HorseguardsClient client = new HorseguardsClient();
 
-        int statusCode = client.get("https://bananas.com")
-                .execute()
-                .statusCode();
+		int statusCode = client.get("https://bananas.com").execute().statusCode();
 
-        return "App running: Served from " + getClass().getName() +
-                " got " + statusCode;
-    }
+		return "App running: Served from " + getClass().getName() + " got " + statusCode;
+	}
 
-    public String storingStatusCodeCorrectly() throws IOException {
+	public String storingStatusCodeCorrectly() throws IOException {
 
-        HorseguardsClient client = new HorseguardsClient();
+		HorseguardsClient client = new HorseguardsClient();
 
-        HorseguardsResponse response = null;
-        try {
-            response = client.get("https://bananas.com")
-                    .execute();
-        } finally {
-            if (response != null) {
-                response.close();
-            }
-        }
+		HorseguardsResponse response = null;
+		try {
+			response = client.get("https://bananas.com").execute();
+		}
+		finally {
+			if (response != null) {
+				response.close();
+			}
+		}
 
-        int statusCode = response.statusCode();
+		int statusCode = response.statusCode();
 
-        return "App running: Served from " + getClass().getName() +
-                " got " + statusCode;
+		return "App running: Served from " + getClass().getName() + " got " + statusCode;
 
-    }
+	}
 
 }

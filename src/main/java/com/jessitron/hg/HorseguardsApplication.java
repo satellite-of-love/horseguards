@@ -9,4 +9,5 @@ public class HorseguardsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(HorseguardsApplication.class, args);
 	}
+
 }
