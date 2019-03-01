@@ -10,8 +10,13 @@ class HorseguardsController {
 
         HorseguardsClient client = new HorseguardsClient();
 
-        HorseguardsResponse response = client.get("https://bananas.com")
-                .execute();
+        HorseguardsResponse response = null;
+    try {
+        response = [object Object];
+    } finally {
+        if (response != null) { response.close(); }
+    }
+    
 
         return "App running: Served from " + getClass().getName() +
                 " got " + response.statusCode();
@@ -39,9 +44,13 @@ class HorseguardsController {
 
         HorseguardsClient client = new HorseguardsClient();
 
-        int statusCode = client.get("https://bananas.com")
-                .execute()
-                .statusCode();
+        HorseguardsResponse response = null;
+    try {
+        response = [object Object];
+    } finally {
+        if (response != null) { response.close(); }
+    }
+    int statusCode = response.statusCode();
 
         return "App running: Served from " + getClass().getName() +
                 " got " + statusCode;
